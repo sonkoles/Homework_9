@@ -1,0 +1,25 @@
+cislo = int(input("Tvoje oblibene cislo?:"))
+slovnik = {}
+def cisluj (cislo):
+	
+	for cisla in range (cislo+1):
+		dalsi_cisla = {cisla:cisla**2}
+		slovnik.update(dalsi_cisla)
+	return (slovnik)
+print (cisluj(cislo))
+
+
+klice = slovnik.keys()
+hodnoty = slovnik.values ()
+
+def soucty (slovnik):
+	suma_klicu = 0
+	suma_hodnot = 0
+	for klic in klice: 
+		suma_klicu += klic
+	for hodnota in hodnoty:
+		suma_hodnot += hodnota
+	print ('Suma vsech klicu je:', suma_klicu, 'a suma vsech hodnot je:', suma_hodnot)
+			
+
+print (soucty(slovnik))
